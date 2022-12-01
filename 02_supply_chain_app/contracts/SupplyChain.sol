@@ -36,7 +36,7 @@ contract SupplyChain {
     address participantAddress;
   }
   // Participants by product ID (product_id)
-  mapping(uint32 => participant) private participants;
+  mapping(uint32 => participant) public participants;
 
 
   uint32 private product_id     = 0;
