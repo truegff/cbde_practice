@@ -97,7 +97,6 @@ contract SupplyChain {
   {
     participant storage p = participants[_ownerParticipantId];
     bytes memory encodedOwnerParticipant = abi.encodePacked(p.participantType);
-    bytes32 manufacturerHash = keccak256('Manufacturer');
     bytes32 ownerParticipantHash = keccak256(encodedOwnerParticipant);
     
     require(ownerParticipantHash == manufacturerHash, "Only Manufacturers' are allowed to add products.");
