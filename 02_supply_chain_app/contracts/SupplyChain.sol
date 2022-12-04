@@ -43,7 +43,7 @@ contract SupplyChain {
   uint32 private participant_id = 0;
   uint32 private owner_id       = 0;
 
-  event TransferOwnership(uint32 productId);
+  event TransferOwnership(uint32 indexed productId);
 
 
   constructor() {

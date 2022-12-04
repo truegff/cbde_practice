@@ -21,11 +21,11 @@ async function invoke(contract, methodName, ...parameters) {
 
 contract("SupplyChain", async accounts => {
   it('should create a Participant', async () => {
-    let instance;
+    let instance = await SupplyChain.deployed();
+
     let participantIdBN;
     let participant;
 
-    instance = await SupplyChain.deployed();
 
     participantIdBN = await invoke(instance, 'addParticipant', "A", "passA", "0xccc00f129AD3316defdE4E1bb4c33B41aEC9be30", "Manufacturer");
     participant = await instance.participants(participantIdBN.toNumber());

@@ -167,3 +167,5 @@ build/
 bin/
 
 # End of https://www.toptal.com/developers/gitignore/api/soliditytruffle,node
+
+.env

@@ -1,0 +1,6 @@
+const BasicMathContract = artifacts.require("BasicMath");
+
+module.exports = function(_deployer) {
+  // deployment steps
+  _deployer.deploy(BasicMathContract);
+};
